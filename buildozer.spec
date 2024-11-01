@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = My Application
+title = Twist
 
 # (str) Package name
-package.name = myapp
+package.name = TWIST
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.test
@@ -37,11 +37,13 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy
+requirements= python3,kivy,https://github.com/kivymd/KivyMD/archive/master.zip,materialyoucolor,exceptiongroup,asyncgui,asynckivy,pillow
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
 # requirements.source.kivy = ../../kivy
+# (list) Permissions
+android.permissions = INTERNET, WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE
 
 # (str) Presplash of the application
 #presplash.filename = %(source.dir)s/data/presplash.png
@@ -67,7 +69,7 @@ orientation = portrait
 osx.python_version = 3
 
 # Kivy version to use
-osx.kivy_version = 1.9.1
+osx.kivy_version = 2.3.0
 
 #
 # Android specific
@@ -136,7 +138,7 @@ fullscreen = 0
 # agreements. This is intended for automation only. If set to False,
 # the default, you will be shown the license when first running
 # buildozer.
-# android.accept_sdk_license = False
+android.accept_sdk_license = True
 
 # (str) Android entry point, default is ok for Kivy-based app
 #android.entrypoint = org.kivy.android.PythonActivity
@@ -282,7 +284,7 @@ fullscreen = 0
 #android.copy_libs = 1
 
 # (list) The Android archs to build for, choices: armeabi-v7a, arm64-v8a, x86, x86_64
-# In past, was `android.arch` as we weren't supporting builds for multiple archs at the same time.
+# In past, was android.arch as we weren't supporting builds for multiple archs at the same time.
 android.archs = arm64-v8a, armeabi-v7a
 
 # (int) overrides automatic versionCode computation (used in build.gradle)
@@ -387,15 +389,15 @@ ios.codesign.allowed = false
 #ios.codesign.development_team.release = <hexstring>
 
 # (str) URL pointing to .ipa file to be installed
-# This option should be defined along with `display_image_url` and `full_size_image_url` options.
+# This option should be defined along with display_image_url and full_size_image_url options.
 #ios.manifest.app_url =
 
 # (str) URL pointing to an icon (57x57px) to be displayed during download
-# This option should be defined along with `app_url` and `full_size_image_url` options.
+# This option should be defined along with app_url and full_size_image_url options.
 #ios.manifest.display_image_url =
 
 # (str) URL pointing to a large icon (512x512px) to be used by iTunes
-# This option should be defined along with `app_url` and `display_image_url` options.
+# This option should be defined along with app_url and display_image_url options.
 #ios.manifest.full_size_image_url =
 
 
